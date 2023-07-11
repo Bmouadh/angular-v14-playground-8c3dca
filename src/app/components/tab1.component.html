@@ -1,3 +1,8 @@
-<h2>Observable weather</h2>
-<input type="text" placeholder="Enter city" />
-<h3>{{ weather }}</h3>
+<h2>Weather App</h2>
+<input type="text" placeholder="Enter city name" />
+<button (click)="getWeather()">Get Weather</button>
+<div *ngIf="weather">
+  <h3>{{ cityName }} Weather</h3>
+  <p>Temperature: {{ weather.main.temp }} &#8451;</p>
+  <p>Description: {{ weather.weather[0].description }}</p>
+</div>
